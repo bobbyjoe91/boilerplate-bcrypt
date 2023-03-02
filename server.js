@@ -11,12 +11,10 @@ const bcrypt = require('bcrypt');
 
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
-  if (err) console.log(err.message);
-  else console.log(hash);
+  console.log(hash);
 
   bcrypt.compare(myPlaintextPassword, hash, (err, same) => {
-    if (err) console.log(err.message);
-    else console.log(same);
+    console.log(same);
   })
 });
 
